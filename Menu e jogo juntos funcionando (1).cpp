@@ -333,7 +333,7 @@ do{
 		}
 	}
 		 
-		  printf("Jogar novamente ? \n 1 - sim \n 2 - N„o "); 
+		  printf("Jogar novamente ? \n 1 - sim \n 2 - N√£o "); 
 		  scanf("%d", &resposta);
 		  }
 		  }
@@ -345,42 +345,44 @@ do{
 			scanf("%dp", &resposta);
 			 if (resposta == 1)
 			  { 
-			  	printf( "\n O jogo de aventura nome do jogo: retrata a histÛria e o personagem principal em uma narrativa interativa,\n"
-				"que geralmente envolve exploraÁ„o e resoluÁ„o de quebra-cabeÁas.\n"
-			  	"O primeiro jogo de aventura foi o Colossal Cave Adventure, lanÁado em 1976, enquanto outros tÌtulos not·veis incluem Zork,\n" 
-			  	"King's Quest, The Secret of Monkey Island e Myst. Em seguida, È apresentado um jogo de aventura/puzzle com trÍs fases,\n"
-				"em que o jogador deve se mover para coletar uma chave e abrir a porta para progredir. S„o fornecidos os comandos disponÌveis,\n"
-			   	"bem como os sÌmbolos utilizados, tais como paredes, chaves, portas abertas e fechadas, botıes, espinhos,\n" 
-			   	"teletransportes e monstros com diferentes nÌveis de inteligÍncia e movimentaÁ„o.\n");
+			  	printf( "\n O jogo de aventura nome do jogo: retrata a hist√≥ria e o personagem principal em uma narrativa interativa,\n"
+				"que geralmente envolve explora√ß√£o e resolu√ß√£o de quebra-cabe√ßas.\n"
+			  	"O primeiro jogo de aventura foi o Colossal Cave Adventure, lan√ßado em 1976, enquanto outros t√≠tulos not√°veis incluem Zork,\n" 
+			  	"King's Quest, The Secret of Monkey Island e Myst. Em seguida, √© apresentado um jogo de aventura/puzzle com tr√™s fases,\n"
+				"em que o jogador deve se mover para coletar uma chave e abrir a porta para progredir. S√£o fornecidos os comandos dispon√≠veis,\n"
+			   	"bem como os s√≠mbolos utilizados, tais como paredes, chaves, portas abertas e fechadas, bot√µes, espinhos,\n" 
+			   	"teletransportes e monstros com diferentes n√≠veis de intelig√™ncia e movimenta√ß√£o.\n");
 
 				printf( "W: O jogador movimenta uma unidade para cima;");
 				printf( "A: O jogador movimenta uma unidade para esquerda;");
 				printf( "S: O jogador movimenta uma unidade para baixo;");
 				printf( "D: O jogador movimenta uma unidade para direita;");
-				printf( "I: O jogador interage com o objeto que est· em cima.");
+				printf( "I: O jogador interage com o objeto que est√° em cima.");
 
-				printf( "&: SÌmbolo que representa o jogador.\n"
-				" *: SÌmbolo que representa uma parede, o jogador ao se movimentar n„o pode passar pela parede.\n"
-				" @: SÌmbolo que representa a chave para abrir a porta para finalizar a fase, a porta abre no momento que o jogador interage com a chave.\n"
-				" D: SÌmbolo que representa a porta fechada.\n"
-				" =: SÌmbolo que representa a porta aberta quando o jogador interage com a chave.\n"
-				" O: SÌmbolo que representa um bot„o que o usu·rio pode interagir, o bot„o fica no ch„o e o jogador deve ficar em cima dele para poder interagir.\n"
-				" #: SÌmbolo que representa um espinho. A fase È reiniciada quando o jogador toca no espinho, caso a fase seja reiniciada trÍs vezes, o jogo volta para o menu principal.\n"
-				" >: SÌmbolo que representa um teletransporte. O teletransporte sempre deve vir em pares, quando o jogador toca em um ele È transportado para o outro e vice-versa.\n"
-				" ¨: SÌmbolo que representa o monstro nÌvel 1. O mostro tem um movimento aleatÛrio, logo, ele movimenta um bloco para cima ou para direita ou para esquerda ou para baixo. O mostro sempre faz uma movimentaÁ„o depois do usu·rio se movimentar ou interagir com um objeto.\n"
-				" K: SÌmbolo que representa o monstro nÌvel 2. O mostro nÌvel dois tem uma inteligÍncia de se movimentar na direÁ„o do jogador. O    monstro n„o precisa saber desviar de obst·culos, ele sempre vai andar em linha reta em direÁ„o do jogador.\n"
+				printf( "&: S√≠mbolo que representa o jogador.\n"
+				" *: S√≠mbolo que representa uma parede, o jogador ao se movimentar n√£o pode passar pela parede.\n"
+				" @: S√≠mbolo que representa a chave para abrir a porta para finalizar a fase, a porta abre no momento que o jogador interage com a chave.\n"
+				" D: S√≠mbolo que representa a porta fechada.\n"
+				" =: S√≠mbolo que representa a porta aberta quando o jogador interage com a chave.\n"
+				" O: S√≠mbolo que representa um bot√£o que o usu√°rio pode interagir, o bot√£o fica no ch√£o e o jogador deve ficar em cima dele para poder interagir.\n"
+				" #: S√≠mbolo que representa um espinho. A fase √© reiniciada quando o jogador toca no espinho, caso a fase seja reiniciada tr√™s vezes, o jogo volta para o menu principal.\n"
+				" >: S√≠mbolo que representa um teletransporte. O teletransporte sempre deve vir em pares, quando o jogador toca em um ele √© transportado para o outro e vice-versa.\n"
+				" ¬¨: S√≠mbolo que representa o monstro n√≠vel 1. O mostro tem um movimento aleat√≥rio, logo, ele movimenta um bloco para cima ou para direita ou para esquerda ou para baixo. O mostro sempre faz uma movimenta√ß√£o depois do usu√°rio se movimentar ou interagir com um objeto.\n"
+				" K: S√≠mbolo que representa o monstro n√≠vel 2. O mostro n√≠vel dois tem uma intelig√™ncia de se movimentar na dire√ß√£o do jogador. O    monstro n√£o precisa saber desviar de obst√°culos, ele sempre vai andar em linha reta em dire√ß√£o do jogador.\n"
 				" \n");
 			  
 			 } 
 				 break;
 		  case 3:
-		  printf(" Encerrando...\n");
+		   printf("√â com tristeza que anunciamos que Dungeon Crawler est√°\nprestes a fechar suas portas. Sabemos que voc√™ passou muitas horas explorando \nmasmorras, derrotando monstros e encontrando tesouros incr√≠veis.\nEsperamos que esta experi√™ncia tenha proporcionado momentos memor√°veis de\nmuita divers√£o. Ficamos honrados em t√™-lo(a) em nossa comunidade\nde aventureiros.");
+		  printf("\nAtenciosamente,\nEquipe Dungeon Crawler.\n");
+		  printf("\nEncerrando...");
 		  
 			    break;
 			    
 		default:
 			
-		  printf("OpÁao Invalida!\n");
+		  printf("Op√ßao Invalida!\n");
 				}
 				} 
 			while (opcao != 3);
