@@ -40,7 +40,7 @@ do{
 	int i, j;
 	int vidas = 2;
 	
-	char mapa[maximo][maximo] = {
+	char mapa[TAM][TAM] = {
         {'*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*'},
         {'*', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', '*', ' ', ' ', '@', ' ', '*'},
         {'*', ' ', '*', ' ', '*', ' ', '*', '*', '*', '*', ' ', ' ', ' ', ' ', '*'},
@@ -126,6 +126,14 @@ do{
 						{
 							continue;
 						}
+						else if(mapa[i-1][j] == '#')
+						{
+							vidas--;
+							mapa[i][j] = ' ';
+							i = j = TAM / 2;
+    						mapa[i][j] = '&';
+							
+						}
 						else if(mapa[i-1][j] == '@')
 						{
 							auxiliar2 = mapa[i-1][j];
@@ -163,6 +171,14 @@ do{
 						if(mapa[i][j-1] == '*' || mapa[i][j-1] == 'D' || mapa[i][j-1] == '=')
 						{
 							continue;
+						}
+						else if(mapa[i][j-1] == '#')
+						{
+							vidas--;
+							mapa[i][j] = ' ';
+							i = j = TAM / 2;
+    						mapa[i][j] = '&';
+							
 						}
 						else if(mapa[i][j-1] == '@')
 						{
@@ -202,6 +218,14 @@ do{
 						{
 							continue;
 						}
+						else if(mapa[i+1][j] == '#')
+						{
+							vidas--;
+							mapa[i][j] = ' ';
+							i = j = TAM / 2;
+    						mapa[i][j] = '&';
+							
+						}
 						else if(mapa[i+1][j] == '@')
 						{
 							auxiliar2 = mapa[i+1][j];
@@ -239,6 +263,14 @@ do{
 						if(mapa[i][j+1] == '*' || mapa[i][j+1] == 'D' || mapa[i][j+1] == '=')
 						{
 							continue;
+						}
+						else if(mapa[i][j+1] == '#')
+						{
+							vidas--;
+							mapa[i][j] = ' ';
+							i = j = TAM / 2;
+    						mapa[i][j] = '&';
+							
 						}
 						else if(mapa[i][j+1] == '@')
 						{
