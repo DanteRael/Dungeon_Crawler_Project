@@ -10,332 +10,336 @@
  int main () 
 {
 	int opcao; 
-	int resposta; 	
-do{ 
-  printf("Menu:\n"); 
-  printf(" 1: Jogar\n"); 
-  printf(" 2: Tutorial\n"); 
-  printf(" 3: Sair\n"); 
-  printf("Digite o numero do jogo desejado: "); 
-  scanf("%d", &opcao); 
-    switch(opcao) 
-	{ 
-	case 1:
-	 do {
-	  printf("Jogo selecionado!\n");
-	   printf("Deseja inciar o jogo? Digite (1-SIM) OU (2-NAO): "); 
-	   scanf("%d", &resposta);
-	    if (resposta == 1) 
+	int resposta;
+	int vidas = 3; 	
+	do{
+
+
+  
+		printf("Menu:\n"); 
+		printf(" 1: Jogar\n"); 
+		printf(" 2: Tutorial\n"); 
+		printf(" 3: Sair\n"); 
+		printf("Digite o numero do jogo desejado: "); 
+		scanf("%d", &opcao); 
+    	switch(opcao) 
 		{ 
-		printf("\nIniciando jogo ...\n");
+		case 1:
+	 	do{
+	  		printf("Jogo selecionado!\n");
+	   		printf("Deseja inciar o jogo? Digite (1-SIM) OU (2-NAO): "); 
+	   		scanf("%d", &resposta);
+	    	if (resposta == 1) 
+			{ 
+				printf("\nIniciando jogo ...\n");
 		
-		 // codigo do jogo aqui
+				 // codigo do jogo aqui
 		 
-		 int maximo = 15;
-	int minimo = 0;
+		 		int maximo = 15;
+				int minimo = 0;
 	
-	char escolha;
-	char auxiliar;
-	char auxiliar2;
-	int i, j;
-	int vidas = 2;
+				char escolha;
+				char auxiliar;
+				char auxiliar2;
+				int i, j;
 	
-	char mapa[TAM][TAM] = {
-        {'*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*'},
-        {'*', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', '*', ' ', ' ', '@', ' ', '*'},
-        {'*', ' ', '*', ' ', '*', ' ', '*', '*', '*', '*', ' ', ' ', ' ', ' ', '*'},
-        {'*', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', '*'},
-        {'*', ' ', ' ', ' ', ' ', ' ', '*', '*', ' ', '*', ' ', ' ', ' ', ' ', '*'},
-        {'*', '@', '*', '*', '*', ' ', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', '*'},
-        {'*', ' ', '*', ' ', ' ', ' ', '*', '*', ' ', '*', '*', 'D', 'D', '*', '*'},
-        {'*', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'},
-        {'*', ' ', '*', ' ', '*', '*', '*', '*', ' ', '*', '*', ' ', '*', ' ', '*'},
-        {'*', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*', ' ', '*', ' ', '*'},
-        {'*', ' ', '*', ' ', '*', ' ', '*', '*', '*', ' ', '*', ' ', '*', ' ', '*'},
-        {'*', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*', ' ', '*'},
-        {'*', '*', '*', ' ', '*', '*', '*', '*', '*', '*', '*', '*', '*', ' ', '*'},
-        {'*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'},
-        {'*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*'}
-    };
+	
+				char mapa[TAM][TAM] = {
+			        {'*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*'},
+			        {'*', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', '*', ' ', ' ', '@', ' ', '*'},
+			        {'*', ' ', '*', ' ', '*', ' ', '*', '*', '*', '*', ' ', ' ', ' ', ' ', '*'},
+			        {'*', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', '*'},
+			        {'*', ' ', ' ', ' ', ' ', ' ', '*', '*', ' ', '*', ' ', ' ', ' ', ' ', '*'},
+			        {'*', '@', '*', '*', '*', ' ', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', '*'},
+			        {'*', ' ', '*', ' ', ' ', ' ', '*', '*', ' ', '*', '*', 'D', 'D', '*', '*'},
+			        {'*', ' ', '*', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'},
+			        {'*', ' ', '*', ' ', '*', '*', '*', '*', ' ', '*', '*', ' ', '*', ' ', '*'},
+			        {'*', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*', ' ', '*', ' ', '*'},
+			        {'*', ' ', '*', ' ', '*', ' ', '*', '*', '*', ' ', '*', ' ', '*', ' ', '*'},
+			        {'*', ' ', ' ', ' ', '*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*', ' ', '*'},
+			        {'*', '*', '*', ' ', '*', '*', '*', '*', '*', '*', '*', '*', '*', ' ', '*'},
+			        {'*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'},
+			        {'*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*'}
+			    					   };
     
     
-    i = j = TAM / 2;
-    mapa[i][j] = '&';
+			    i = j = TAM / 2;
+			    mapa[i][j] = '&';
+				
+				for(i = minimo; i < maximo; i++)
+				{
+					for(j = minimo; j < maximo; j++)
+					{
+						printf("%c ", mapa[i][j]);
+					}
+					printf("\n");
+				}
+				
+				for(i = minimo; i < maximo; i++)
+				{
+					for(j = minimo; j < maximo; j++)
+					{
+						if(mapa[i][j] == '&')
+						{
+							printf("\n%d %d\n", i, j);
+						}
+					}
+				}
 	
-	for(i = minimo; i < maximo; i++)
-	{
-		for(j = minimo; j < maximo; j++)
-		{
-			printf("%c ", mapa[i][j]);
-		}
-		printf("\n");
-	}
-	
-	for(i = minimo; i < maximo; i++)
-	{
-		for(j = minimo; j < maximo; j++)
-		{
-			if(mapa[i][j] == '&')
-			{
-				printf("\n%d %d\n", i, j);
-			}
-		}
-	}
-	
-	while(1)
-	{	
-		escolha = getch();
-		
-		if(escolha == 'i')
-{
-    if(mapa[5][1] == '&')
-    {
-        mapa[6][11] = ' ';
-        mapa[6][12] = ' ';
-        mapa[5][10] = '=';
-        mapa[5][13] = '=';
-    }
-    else if(mapa[1][12] == '&')
-    {
-        system("cls");
-        printf("Fase 1 concluida!!!\n\n");
-        sleep(1);
-        system("pause");
-        system("cls");
-        printf("Iniciando Fase 2.\n\n");
-        sleep(1);
-        system("pause");
-        system("cls");
-        break;
-    }
-    else
-    {
-        continue;
-    }
-}
-		
-		if(escolha == 'w')
-		{
-			for(i = minimo; i < maximo; i++)
-			{
-				for(j = minimo; j < maximo; j++)
-				{
-					if(mapa[i][j] == '&')
+				while(1)
+				{	
+					escolha = getch();
+					
+					if(escolha == 'i')
 					{
-						if(mapa[i-1][j] == '*' || mapa[i-1][j] == 'D' || mapa[i-1][j] == '=')
+					    if(mapa[5][1] == '&')
+					    {
+					    	mapa[6][11] = ' ';
+					        mapa[6][12] = ' ';
+					        mapa[5][10] = '=';
+					        mapa[5][13] = '=';
+					    }
+					    else if(mapa[1][12] == '&')
+					    {
+					        system("cls");
+					        printf("Fase 1 concluida!!!\n\n");
+					        sleep(1);
+					        system("pause");
+					        system("cls");
+					        printf("Iniciando Fase 2.\n\n");
+					        sleep(1);
+					        system("pause");
+					        system("cls");
+					        break;
+					    }
+					    else
+					    {
+					        continue;
+					    }
+					}
+		
+					if(escolha == 'w')
+					{
+						for(i = minimo; i < maximo; i++)
 						{
-							continue;
-						}
-						else if(mapa[i-1][j] == '#')
-						{
-							vidas--;
-							mapa[i][j] = ' ';
-							i = j = TAM / 2;
-    						mapa[i][j] = '&';
-							
-						}
-						else if(mapa[i-1][j] == '@')
-						{
-							auxiliar2 = mapa[i-1][j];
-							mapa[i-1][j] = ' ';
-							auxiliar = mapa[i][j];
-							mapa[i][j] = mapa[i-1][j];
-							mapa[i-1][j] = auxiliar;
-						}
-						else if(auxiliar2 == '@')
-						{
-							auxiliar = mapa[i][j];
-							mapa[i][j] = auxiliar2;
-							mapa[i-1][j] = auxiliar;
-							auxiliar2 = ' ';
-						}
-						else
-						{
-							auxiliar = mapa[i][j];
-							mapa[i][j] = mapa[i-1][j];
-							mapa[i-1][j] = auxiliar;
+							for(j = minimo; j < maximo; j++)
+							{
+								if(mapa[i][j] == '&')
+								{
+									if(mapa[i-1][j] == '*' || mapa[i-1][j] == 'D' || mapa[i-1][j] == '=')
+									{
+										continue;
+									}
+									else if(mapa[i-1][j] == '#')
+									{
+										vidas--;
+										mapa[i][j] = ' ';
+										i = j = TAM / 2;
+			    						mapa[i][j] = '&';
+										
+									}
+									else if(mapa[i-1][j] == '@')
+									{
+										auxiliar2 = mapa[i-1][j];
+										mapa[i-1][j] = ' ';
+										auxiliar = mapa[i][j];
+										mapa[i][j] = mapa[i-1][j];
+										mapa[i-1][j] = auxiliar;
+									}
+									else if(auxiliar2 == '@')
+									{
+										auxiliar = mapa[i][j];
+										mapa[i][j] = auxiliar2;
+										mapa[i-1][j] = auxiliar;
+										auxiliar2 = ' ';
+									}
+									else
+									{
+										auxiliar = mapa[i][j];
+										mapa[i][j] = mapa[i-1][j];
+										mapa[i-1][j] = auxiliar;
+									}
+								}
+							}
 						}
 					}
-				}
-			}
-		}
 		
-		if(escolha == 'a')
-		{
-			for(i = minimo; i < maximo; i++)
-			{
-				for(j = minimo; j < maximo; j++)
-				{
-					if(mapa[i][j] == '&')
+					if(escolha == 'a')
 					{
-						if(mapa[i][j-1] == '*' || mapa[i][j-1] == 'D' || mapa[i][j-1] == '=')
+						for(i = minimo; i < maximo; i++)
 						{
-							continue;
-						}
-						else if(mapa[i][j-1] == '#')
-						{
-							vidas--;
-							mapa[i][j] = ' ';
-							i = j = TAM / 2;
-    						mapa[i][j] = '&';
-							
-						}
-						else if(mapa[i][j-1] == '@')
-						{
-							auxiliar2 = mapa[i][j-1];
-							mapa[i][j-1] = ' ';
-							auxiliar = mapa[i][j];
-							mapa[i][j] = mapa[i][j-1];
-							mapa[i][j-1] = auxiliar;
-						}
-						else if(auxiliar2 == '@')
-						{
-							auxiliar = mapa[i][j];
-							mapa[i][j] = auxiliar2;
-							mapa[i][j-1] = auxiliar;
-							auxiliar2 = ' ';
-						}
-						else
-						{
-							auxiliar = mapa[i][j];
-							mapa[i][j] = mapa[i][j-1];
-							mapa[i][j-1] = auxiliar;
+							for(j = minimo; j < maximo; j++)
+							{
+								if(mapa[i][j] == '&')
+								{
+									if(mapa[i][j-1] == '*' || mapa[i][j-1] == 'D' || mapa[i][j-1] == '=')
+									{
+										continue;
+									}
+									else if(mapa[i][j-1] == '#')
+									{
+										vidas--;
+										mapa[i][j] = ' ';
+										i = j = TAM / 2;
+			    						mapa[i][j] = '&';
+										
+									}
+									else if(mapa[i][j-1] == '@')
+									{
+										auxiliar2 = mapa[i][j-1];
+										mapa[i][j-1] = ' ';
+										auxiliar = mapa[i][j];
+										mapa[i][j] = mapa[i][j-1];
+										mapa[i][j-1] = auxiliar;
+									}
+									else if(auxiliar2 == '@')
+									{
+										auxiliar = mapa[i][j];
+										mapa[i][j] = auxiliar2;
+										mapa[i][j-1] = auxiliar;
+										auxiliar2 = ' ';
+									}
+									else
+									{
+										auxiliar = mapa[i][j];
+										mapa[i][j] = mapa[i][j-1];
+										mapa[i][j-1] = auxiliar;
+									}
+								}
+							}
 						}
 					}
-				}
-			}
-		}
 		
-		if(escolha == 's')
-		{
-			for(i = maximo-1; i > minimo; i--)
-			{
-				for(j = maximo-1; j > minimo; j--)
-				{
-					if(mapa[i][j] == '&')
+					if(escolha == 's')
 					{
-						if(mapa[i+1][j] == '*' || mapa[i+1][j] == 'D' || mapa[i+1][j] == '=')
+						for(i = maximo-1; i > minimo; i--)
 						{
-							continue;
-						}
-						else if(mapa[i+1][j] == '#')
-						{
-							vidas--;
-							mapa[i][j] = ' ';
-							i = j = TAM / 2;
-    						mapa[i][j] = '&';
-							
-						}
-						else if(mapa[i+1][j] == '@')
-						{
-							auxiliar2 = mapa[i+1][j];
-							mapa[i+1][j] = ' ';
-							auxiliar = mapa[i][j];
-							mapa[i][j] = mapa[i+1][j];
-							mapa[i+1][j] = auxiliar;
-						}
-						else if(auxiliar2 == '@')
-						{
-							auxiliar = mapa[i][j];
-							mapa[i][j] = auxiliar2;
-							mapa[i+1][j] = auxiliar;
-							auxiliar2 = ' ';
-						}
-						else
-						{
-							auxiliar = mapa[i][j];
-							mapa[i][j] = mapa[i+1][j];
-							mapa[i+1][j] = auxiliar;
+							for(j = maximo-1; j > minimo; j--)
+							{
+								if(mapa[i][j] == '&')
+								{
+									if(mapa[i+1][j] == '*' || mapa[i+1][j] == 'D' || mapa[i+1][j] == '=')
+									{
+										continue;
+									}
+									else if(mapa[i+1][j] == '#')
+									{
+										vidas--;
+										mapa[i][j] = ' ';
+										i = j = TAM / 2;
+			    						mapa[i][j] = '&';
+										
+									}
+									else if(mapa[i+1][j] == '@')
+									{
+										auxiliar2 = mapa[i+1][j];
+										mapa[i+1][j] = ' ';
+										auxiliar = mapa[i][j];
+										mapa[i][j] = mapa[i+1][j];
+										mapa[i+1][j] = auxiliar;
+									}
+									else if(auxiliar2 == '@')
+									{
+										auxiliar = mapa[i][j];
+										mapa[i][j] = auxiliar2;
+										mapa[i+1][j] = auxiliar;
+										auxiliar2 = ' ';
+									}
+									else
+									{
+										auxiliar = mapa[i][j];
+										mapa[i][j] = mapa[i+1][j];
+										mapa[i+1][j] = auxiliar;
+									}
+								}
+							}
 						}
 					}
-				}
-			}
-		}
 		
-		if(escolha == 'd')
-		{
-			for(i = maximo-1; i > minimo; i--)
-			{
-				for(j = maximo-1; j > minimo; j--)
-				{
-					if(mapa[i][j] == '&')
+					if(escolha == 'd')
 					{
-						if(mapa[i][j+1] == '*' || mapa[i][j+1] == 'D' || mapa[i][j+1] == '=')
+						for(i = maximo-1; i > minimo; i--)
 						{
-							continue;
-						}
-						else if(mapa[i][j+1] == '#')
-						{
-							vidas--;
-							mapa[i][j] = ' ';
-							i = j = TAM / 2;
-    						mapa[i][j] = '&';
-							
-						}
-						else if(mapa[i][j+1] == '@')
-						{
-							auxiliar2 = mapa[i][j+1];
-							mapa[i][j+1] = ' ';
-							auxiliar = mapa[i][j];
-							mapa[i][j] = mapa[i][j+1];
-							mapa[i][j+1] = auxiliar;
-						}
-						else if(auxiliar2 == '@')
-						{
-							auxiliar = mapa[i][j];
-							mapa[i][j] = auxiliar2;
-							mapa[i][j+1] = auxiliar;
-							auxiliar2 = ' ';
-						}
-						else
-						{
-							auxiliar = mapa[i][j];
-							mapa[i][j] = mapa[i][j+1];
-							mapa[i][j+1] = auxiliar;
+							for(j = maximo-1; j > minimo; j--)
+							{
+								if(mapa[i][j] == '&')
+								{
+									if(mapa[i][j+1] == '*' || mapa[i][j+1] == 'D' || mapa[i][j+1] == '=')
+									{
+										continue;
+									}
+									else if(mapa[i][j+1] == '#')
+									{
+										vidas--;
+										mapa[i][j] = ' ';
+										i = j = TAM / 2;
+			    						mapa[i][j] = '&';
+										
+									}
+									else if(mapa[i][j+1] == '@')
+									{
+										auxiliar2 = mapa[i][j+1];
+										mapa[i][j+1] = ' ';
+										auxiliar = mapa[i][j];
+										mapa[i][j] = mapa[i][j+1];
+										mapa[i][j+1] = auxiliar;
+									}
+									else if(auxiliar2 == '@')
+									{
+										auxiliar = mapa[i][j];
+										mapa[i][j] = auxiliar2;
+										mapa[i][j+1] = auxiliar;
+										auxiliar2 = ' ';
+									}
+									else
+									{
+										auxiliar = mapa[i][j];
+										mapa[i][j] = mapa[i][j+1];
+										mapa[i][j+1] = auxiliar;
+									}
+								}
+							}
 						}
 					}
-				}
-			}
-		}
+
+					system("cls");
 		
-		system("cls");
+					for(i = minimo; i < maximo; i++)
+					{
+						for(j = minimo; j < maximo; j++)
+						{
+							printf("%c ", mapa[i][j]);
+						}
+						printf("\n");
+					}
+					
+					for(i = minimo; i < maximo; i++)
+					{
+						for(j = minimo; j < maximo; j++)
+						{
+							if(mapa[i][j] == '&')
+							{
+								printf("\n%d %d\n\n", i, j);
+							}
+						}
+					}
 		
-		for(i = minimo; i < maximo; i++)
-		{
-			for(j = minimo; j < maximo; j++)
-			{
-				printf("%c ", mapa[i][j]);
-			}
-			printf("\n");
-		}
-		
-		for(i = minimo; i < maximo; i++)
-		{
-			for(j = minimo; j < maximo; j++)
-			{
-				if(mapa[i][j] == '&')
-				{
-					printf("\n%d %d\n\n", i, j);
-				}
-			}
-		}
-		
-		if(auxiliar2 == '@')
-		{
-			printf("auxiliar2 = '@'\n\n");
-		}
-		else
-		{
-			printf("auxiliar2 = ' '\n\n");
-		}
-	}
-		 
-		  printf("Jogar novamente ? \n 1 - sim \n 2 - Não "); 
-		  scanf("%d", &resposta);
-		  }
-		  }
-		  while(resposta == 1);
-		  break;
+					if(auxiliar2 == '@')
+					{
+						printf("auxiliar2 = '@'\n\n");
+					}
+					else
+					{
+						printf("auxiliar2 = ' '\n\n");
+					}
+							}
+					 
+					  printf("Jogar novamente ? \n 1 - sim \n 2 - Não "); 
+					  scanf("%d", &resposta);
+					  }
+					  }
+					  while(resposta == 1);
+					  break;
 		  
 	case 2: printf(" Tutorial selecionado!\n"); 
 			printf("Deseja abrir o tutorial? Digite (1-SIM) OU (2-NAO): "); 
@@ -378,12 +382,12 @@ do{
 		  
 			    break;
 			    
-		default:
+			default:
 			
 		  printf("Opçao Invalida!\n");
-				}
-				} 
-			while (opcao != 3);
+		}
+	  } 
+		  while (opcao != 3);
 				
 return 0;
 }
