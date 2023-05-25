@@ -11,7 +11,7 @@
 
 int c2;
 
-// Função/Código do monstro lvl 2 para o mapa 2
+// FunÃ§Ã£o/CÃ³digo do monstro lvl 2 para o mapa 2
 void moverMonstro2(char mapa3[tam3][tam3], int* monstro2_i, int* monstro2_j, int jogador_i, int jogador_j) {
     int nova3_i = *monstro2_i;
     int nova3_j = *monstro2_j;
@@ -23,7 +23,7 @@ void moverMonstro2(char mapa3[tam3][tam3], int* monstro2_i, int* monstro2_j, int
         nova3_i--;
         nova3_j = *monstro2_j;  // Impedir movimento na diagonal
     } else {
-        nova3_i = *monstro2_i;  // Se as linhas são iguais, manter a mesma linha
+        nova3_i = *monstro2_i;  // Se as linhas sÃ£o iguais, manter a mesma linha
         
 	}      
 
@@ -34,30 +34,30 @@ void moverMonstro2(char mapa3[tam3][tam3], int* monstro2_i, int* monstro2_j, int
         nova3_j--;
         nova3_i = *monstro2_i; // Impedir movimento na diagonal
     } else {
-    	nova3_j = *monstro2_j; //Se as linhas são iguais, mantes a mesma linha
+    	nova3_j = *monstro2_j; //Se as linhas sÃ£o iguais, mantes a mesma linha
 	}
 
-    // Verificar se o movimento do monstro é válido
+    // Verificar se o movimento do monstro Ã© vÃ¡lido
     if (mapa3[nova3_i][nova3_j] == ' ' ) {
-        mapa3[*monstro2_i][*monstro2_j] = ' ';  // Apagar a posição anterior do monstro
+        mapa3[*monstro2_i][*monstro2_j] = ' ';  // Apagar a posiÃ§Ã£o anterior do monstro
         *monstro2_i = nova3_i;
         *monstro2_j = nova3_j;
-        mapa3[*monstro2_i][*monstro2_j] = 'K';  // Atualizar a nova posição do monstro
+        mapa3[*monstro2_i][*monstro2_j] = 'K';  // Atualizar a nova posiÃ§Ã£o do monstro
     }
     else if(mapa3[nova3_i][nova3_j] == '&')
     {
     	c2 = 1;
-    	mapa3[*monstro2_i][*monstro2_j] = ' ';  // Apagar a posição anterior do monstro
+    	mapa3[*monstro2_i][*monstro2_j] = ' ';  // Apagar a posiÃ§Ã£o anterior do monstro
     	mapa3[28][1] = '&';
     	*monstro2_i = nova3_i;
         *monstro2_j = nova3_j;
-        mapa3[*monstro2_i][*monstro2_j] = 'K';  // Atualizar a nova posição do monstro
+        mapa3[*monstro2_i][*monstro2_j] = 'K';  // Atualizar a nova posiÃ§Ã£o do monstro
 	}
 }
 
-// Função/Código do monstro lvl 1 para mapa 2
+// FunÃ§Ã£o/CÃ³digo do monstro lvl 1 para mapa 2
 void moverMonstro_fase2(char mapa2[tam2][tam2], int* monstro_i, int* monstro_j) {
-    int movimento_monstro = rand() % 4;  // Gera um número aleatório entre 0 e 3
+    int movimento_monstro = rand() % 4;  // Gera um nÃºmero aleatÃ³rio entre 0 e 3
     int nova_i = *monstro_i;
     int nova_j = *monstro_j;
     
@@ -77,27 +77,27 @@ void moverMonstro_fase2(char mapa2[tam2][tam2], int* monstro_i, int* monstro_j) 
             break;
     }
 
-    // Verificar se o movimento do monstro é válido
+    // Verificar se o movimento do monstro Ã© vÃ¡lido
     if (mapa2[nova_i][nova_j] == ' ' ) {
-        mapa2[*monstro_i][*monstro_j] = ' ';  // Apagar a posição anterior do monstro
+        mapa2[*monstro_i][*monstro_j] = ' ';  // Apagar a posiÃ§Ã£o anterior do monstro
         *monstro_i = nova_i;
         *monstro_j = nova_j;
-        mapa2[*monstro_i][*monstro_j] = '¬';  // Atualizar a nova posição do monstro
+        mapa2[*monstro_i][*monstro_j] = 'Â¬';  // Atualizar a nova posiÃ§Ã£o do monstro
     }
     else if(mapa2[nova_i][nova_j] == '&')
     {
     	c2 = 1;
-    	mapa2[*monstro_i][*monstro_j] = ' ';  // Apagar a posição anterior do monstro
+    	mapa2[*monstro_i][*monstro_j] = ' ';  // Apagar a posiÃ§Ã£o anterior do monstro
     	mapa2[27][2] = '&';
     	*monstro_i = nova_i;
         *monstro_j = nova_j;
-        mapa2[*monstro_i][*monstro_j] = '¬';  // Atualizar a nova posição do monstro
+        mapa2[*monstro_i][*monstro_j] = 'Â¬';  // Atualizar a nova posiÃ§Ã£o do monstro
 	}
 }
 
-// Função/Código do monstro lvl 1 para mapa 3
+// FunÃ§Ã£o/CÃ³digo do monstro lvl 1 para mapa 3
 void moverMonstro_fase3(char mapa3[tam3][tam3], int* monstro_i, int* monstro_j) {
-    int movimento_monstro = rand() % 4;  // Gera um número aleatório entre 0 e 3
+    int movimento_monstro = rand() % 4;  // Gera um nÃºmero aleatÃ³rio entre 0 e 3
     int nova_i = *monstro_i;
     int nova_j = *monstro_j;
     
@@ -117,21 +117,21 @@ void moverMonstro_fase3(char mapa3[tam3][tam3], int* monstro_i, int* monstro_j) 
             break;
     }
 
-    // Verificar se o movimento do monstro é válido
+    // Verificar se o movimento do monstro Ã© vÃ¡lido
     if (mapa3[nova_i][nova_j] == ' ' ) {
-        mapa3[*monstro_i][*monstro_j] = ' ';  // Apagar a posição anterior do monstro
+        mapa3[*monstro_i][*monstro_j] = ' ';  // Apagar a posiÃ§Ã£o anterior do monstro
         *monstro_i = nova_i;
         *monstro_j = nova_j;
-        mapa3[*monstro_i][*monstro_j] = '¬';  // Atualizar a nova posição do monstro
+        mapa3[*monstro_i][*monstro_j] = 'Â¬';  // Atualizar a nova posiÃ§Ã£o do monstro
     }
     else if(mapa3[nova_i][nova_j] == '&')
     {
     	c2 = 1;
-    	mapa3[*monstro_i][*monstro_j] = ' ';  // Apagar a posição anterior do monstro
+    	mapa3[*monstro_i][*monstro_j] = ' ';  // Apagar a posiÃ§Ã£o anterior do monstro
     	mapa3[27][2] = '&';
     	*monstro_i = nova_i;
         *monstro_j = nova_j;
-        mapa3[*monstro_i][*monstro_j] = '¬';  // Atualizar a nova posição do monstro
+        mapa3[*monstro_i][*monstro_j] = 'Â¬';  // Atualizar a nova posiÃ§Ã£o do monstro
 	}
 }
 
@@ -172,17 +172,17 @@ void delay(int milisegundos) {
 
 void animacao_GameOver() {
     int i, j;
-    int screenRows = 25; // Número de linhas da tela
+    int screenRows = 25; // NÃºmero de linhas da tela
     int centerRow = screenRows / 2; // Linha do centro da tela
     int delayTime = 100; // Tempo de atraso entre os quadros (em milissegundos)
-    int maxOffset = centerRow; // Máximo deslocamento vertical
+    int maxOffset = centerRow; // MÃ¡ximo deslocamento vertical
     
     Limpar_tela();
     
     for (i = 0; i <= maxOffset; i++) {
         Limpar_tela();
         
-        // Imprime espaços vazios para deslocar a frase verticalmente
+        // Imprime espaÃ§os vazios para deslocar a frase verticalmente
         for (j = 0; j < i; j++) {
             printf("\n");
         }
@@ -190,7 +190,7 @@ void animacao_GameOver() {
         // Imprime a frase "GAME OVER"
         printf("\t\t\t   GAME OVER\n");
         
-        // Imprime espaços vazios para centralizar a frase horizontalmente
+        // Imprime espaÃ§os vazios para centralizar a frase horizontalmente
         for (j = 0; j < centerRow - i; j++) {
             printf("\n");
         }
@@ -210,25 +210,25 @@ void animacao_GameOver() {
 
 void animacao_Vitoria() {
     int i, j;
-    int screenRows = 25; // Número de linhas da tela
+    int screenRows = 25; // NÃºmero de linhas da tela
     int centerRow = screenRows / 2; // Linha do centro da tela
     int delayTime = 100; // Tempo de atraso entre os quadros (em milissegundos)
-    int maxOffset = centerRow; // Máximo deslocamento vertical
+    int maxOffset = centerRow; // MÃ¡ximo deslocamento vertical
     
     Limpar_tela();
     
     for (i = 0; i <= maxOffset; i++) {
         Limpar_tela();
         
-        // Imprime espaços vazios para deslocar a frase verticalmente
+        // Imprime espaÃ§os vazios para deslocar a frase verticalmente
         for (j = 0; j < i; j++) {
             printf("\n");
         }
         
-        // Imprime a frase "GAME OVER"
-        printf("\t\t\t   GAME OVER\n");
+        // Imprime a frase "VITORIA"
+        printf("\t\t\t   VITORIA\n");
         
-        // Imprime espaços vazios para centralizar a frase horizontalmente
+        // Imprime espaÃ§os vazios para centralizar a frase horizontalmente
         for (j = 0; j < centerRow - i; j++) {
             printf("\n");
         }
@@ -248,7 +248,7 @@ void animacao_Vitoria() {
 
 
 
-// Definição de música
+// DefiniÃ§Ã£o de mÃºsica
 const int C = 261;
 const int D = 293;
 const int E = 329;
@@ -259,7 +259,7 @@ const int B = 493;
 
 
 
-// Função principal do jogo
+// FunÃ§Ã£o principal do jogo
 int main()
 {
 	int i;
@@ -388,7 +388,7 @@ int main()
 		   {'*', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '*'},
 		   {'*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*','*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*','*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*', '*'},
 		};
-	// No mapa 3 o personagem nasce na posição [28][1]
+	// No mapa 3 o personagem nasce na posiÃ§Ã£o [28][1]
 	
 	//linha 48
 
@@ -411,7 +411,7 @@ int main()
 			int vidas = 3;
 			system("cls");
 			carregarPrograma();
-			// Reproduz a música de carregamento
+			// Reproduz a mÃºsica de carregamento
 		    Beep(E, quarterNote);     // E
 		    Beep(G, quarterNote);     // G
 		    Beep(C * 2, quarterNote); // C (uma oitava acima)
@@ -452,8 +452,25 @@ int main()
 					
 				char escolha = getch();
 				
-				if(escolha == 'p') //Cheat Code para passar de fase. Apenas para fins de apresentação
+				if(escolha == 'p') //Cheat Code para passar de fase
 				{
+					char auxiliar1 = ' ', auxiliar2 = ' ';
+					system("cls");
+					printf("FASE 1 CONCLUIDA\n");
+					system("pause");
+					system("cls");
+					carregarPrograma();
+					// Reproduz a mÃºsica de carregamento
+					Beep(E, quarterNote);
+				       	Beep(A * 2, quarterNote);
+				        Beep(B * 2, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(E, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(C * 2, quarterNote);
+				        Beep(G, quarterNote);
+					printf("Iniciando Fase 2...\n");
+					system("pause");
 					break;
 				}
 				else if(escolha == 'i')
@@ -473,16 +490,15 @@ int main()
 						system("pause");
 						system("cls");
 						carregarPrograma();
-						// Reproduz a música de carregamento
-					    Beep(E, quarterNote);
-				        Beep(A * 2, quarterNote);
-				        Beep(B * 2, quarterNote);
-				        Beep(G, quarterNote);
-				
-				        Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
+						// Reproduz a mÃºsica de carregamento
+					    	Beep(E, quarterNote);
+				       		Beep(A * 2, quarterNote);
+				        	Beep(B * 2, quarterNote);
+				        	Beep(G, quarterNote);
+				        	Beep(E, quarterNote);
+				        	Beep(G, quarterNote);
+				        	Beep(C * 2, quarterNote);
+				        	Beep(G, quarterNote);
 						printf("Iniciando Fase 2...\n");
 						system("pause");
 						break;
@@ -682,15 +698,15 @@ int main()
 					}
 				}
 			}
-			// Posição inicial do monstro lvl 1 na fase 2 (TEM QUE ESTAR FORA DO LAÇO WHILE DA FASE EM QUE O MONSTRO ESTÁ)
+			// PosiÃ§Ã£o inicial do monstro lvl 1 na fase 2 (TEM QUE ESTAR FORA DO LAÃ‡O WHILE DA FASE EM QUE O MONSTRO ESTÃ)
    			int monstro_i = 1;
-    		int monstro_j = 6;
-    		mapa2[monstro_i][monstro_j] = '¬';
+    			int monstro_j = 6;
+    			mapa2[monstro_i][monstro_j] = 'Â¬';
 			
 			while(c1 != 1) //Fase 2 #############################################################################################################################
 			{
 				c2 = 0;                                               
-    			// Lógica para movimentação do monstro (TEM QUE ESTAR DENTRO DO lAÇO WHILE DA FASE DO MONSTRO)
+    			// LÃ³gica para movimentaÃ§Ã£o do monstro (TEM QUE ESTAR DENTRO DO lAÃ‡O WHILE DA FASE DO MONSTRO)
         		moverMonstro_fase2(mapa2, &monstro_i, &monstro_j);
 				auxiliar1 = ' ', auxiliar2 = ' ';
 				
@@ -724,8 +740,25 @@ int main()
 					
 				char escolha = getch();
 				
-				if(escolha == 'p') //Cheat Code para passar de fase. Apenas para fins de apresentação
+				if(escolha == 'p') //Cheat Code para passar de fase
 				{
+					char auxiliar1 = ' ', auxiliar2 = ' ';
+					system("cls");
+					printf("FASE 2 CONCLUIDA\n");
+					system("pause");
+					system("cls");
+					carregarPrograma();
+					// Reproduz a mÃºsica de carregamento
+					Beep(E, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(C * 2, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(E, quarterNote);
+				        Beep(A * 2, quarterNote);
+				        Beep(B * 2, quarterNote);
+				        Beep(G, quarterNote);
+					printf("Iniciando Fase 3...\n");
+					system("pause");
 					break;
 				}
 				else if(escolha == 'i')
@@ -765,16 +798,15 @@ int main()
 						system("pause");
 						system("cls");
 						carregarPrograma();
-						// Reproduz a música de carregamento
-					    Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
-				
-				        Beep(E, quarterNote);
-				        Beep(A * 2, quarterNote);
-				        Beep(B * 2, quarterNote);
-				        Beep(G, quarterNote);
+						// Reproduz a mÃºsica de carregamento
+						Beep(E, quarterNote);
+						Beep(G, quarterNote);
+						Beep(C * 2, quarterNote);
+						Beep(G, quarterNote);
+						Beep(E, quarterNote);
+						Beep(A * 2, quarterNote);
+						Beep(B * 2, quarterNote);
+						Beep(G, quarterNote);
 						printf("Iniciando Fase 3...\n");
 						system("pause");
 						break;
@@ -796,10 +828,10 @@ int main()
 									continue;
 								}
 								// Verificar se o jogador colidiu com o monstro (PRECISA TER ISSO)
-					        	else if(mapa2[i-1][j] == '¬') 
+					        	else if(mapa2[i-1][j] == 'Â¬') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa2[i][j] = ' ';
 					           		i = 27;
 					           		j = 2;
@@ -873,10 +905,10 @@ int main()
 									continue;
 								}
 								// Verificar se o jogador colidiu com o monstro (PRECISA TER ISSO)
-					        	else if(mapa2[i][j-1] == '¬') 
+					        	else if(mapa2[i][j-1] == 'Â¬') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa2[i][j] = ' ';
 					           		i = 27;
 					           		j = 2;
@@ -950,10 +982,10 @@ int main()
 									continue;
 								}
 								// Verificar se o jogador colidiu com o monstro (PRECISA TER ISSO)
-					        	else if(mapa2[i+1][j] == '¬') 
+					        	else if(mapa2[i+1][j] == 'Â¬') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa2[i][j] = ' ';
 					           		i = 27;
 					           		j = 2;
@@ -1027,10 +1059,10 @@ int main()
 									continue;
 								}
 								// Verificar se o jogador colidiu com o monstro (PRECISA TER ISSO)
-					        	else if(mapa2[i][j+1] == '¬') 
+					        	else if(mapa2[i][j+1] == 'Â¬') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa2[i][j] = ' ';
 					           		i = 27;
 					           		j = 2;
@@ -1090,26 +1122,26 @@ int main()
 				}
 			}
 			
-			// Posição inicial do jogador
+			// PosiÃ§Ã£o inicial do jogador
 			i = 28;
-		    j = 1;
-		    mapa3[i][j] = '&';
-			// Posição inicial do monstro 2 no mapa 3
-		    int monstro2_i = 28;
-		    int monstro2_j = 6;
-		    mapa3[monstro2_i][monstro2_j] = 'K';
-		    // Posição inicial do monstro lvl 1 na fase 3 (TEM QUE ESTAR FORA DO LAÇO WHILE DA FASE EM QUE O MONSTRO ESTÁ)
+		    	j = 1;
+		    	mapa3[i][j] = '&';
+			// PosiÃ§Ã£o inicial do monstro 2 no mapa 3
+			int monstro2_i = 28;
+			int monstro2_j = 6;
+			mapa3[monstro2_i][monstro2_j] = 'K';
+			// PosiÃ§Ã£o inicial do monstro lvl 1 na fase 3 (TEM QUE ESTAR FORA DO LAÃ‡O WHILE DA FASE EM QUE O MONSTRO ESTÃ)
    			int monstro1_mapa3_i = 28;
-    		int monstro1_mapa3_j = 21;
-    		mapa2[monstro1_mapa3_i][monstro1_mapa3_j] = '¬';
+			int monstro1_mapa3_j = 21;
+			mapa2[monstro1_mapa3_i][monstro1_mapa3_j] = 'Â¬';
 		    
 			while(c1 != 1)
 			{ //Fase 3 ##########################################################################################################################################################
 				c2 = 0;                                               
-    			// Lógica para movimentação do monstro lvl 2 (TEM QUE ESTAR DENTRO DO lAÇO WHILE(1)
-        		moverMonstro2(mapa3, &monstro2_i, &monstro2_j, personagem_i, personagem_j);
+    				// LÃ³gica para movimentaÃ§Ã£o do monstro lvl 2 (TEM QUE ESTAR DENTRO DO lAÃ‡O WHILE(1)
+        			moverMonstro2(mapa3, &monstro2_i, &monstro2_j, personagem_i, personagem_j);
         		
-        		// Função/Código de movimentação do monstro lvl 1 para o mapa 3
+        			// FunÃ§Ã£o/CÃ³digo de movimentaÃ§Ã£o do monstro lvl 1 para o mapa 3
 				moverMonstro_fase3(mapa3, &monstro1_mapa3_i, &monstro1_mapa3_j);
         		
 				auxiliar1 = ' '; auxiliar2 = ' ';
@@ -1144,8 +1176,43 @@ int main()
 					
 				char escolha = getch();
 				
-				if(escolha == 'p') //Cheat Code para passar de fase. Apenas para fins de apresentação
+				if(escolha == 'p') //Cheat Code para passar de fase
 				{
+					char auxiliar1 = ' ', auxiliar2 = ' ';
+					system("cls");
+					printf("FASE 3 CONCLUIDA\n");
+					system("pause");
+					system("cls");
+					animacao_Vitoria();
+					Beep(E, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(C * 2, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(E, quarterNote);
+				        Beep(A * 2, quarterNote);
+				        Beep(B * 2, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(E, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(C * 2, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(E, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(D * 2, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(E, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(C * 2, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(E, quarterNote);
+				        Beep(A * 2, quarterNote);
+				        Beep(B * 2, quarterNote);
+				        Beep(G, quarterNote);
+					printf("\nPARABENS! VOCE CONCLUIU TODAS AS FASES E CHEGOU AO FINAL DO JOGO!\n");
+					system("pause");
+					system("cls");
+					printf("\nOBRIGADO POR JOGAR!\n");
+					system("pause");
 					break;
 				}
 				else if(escolha == 'i')
@@ -1177,34 +1244,29 @@ int main()
 						system("cls");
 						animacao_Vitoria();
 						Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
-				
-				        Beep(E, quarterNote);
-				        Beep(A * 2, quarterNote);
-				        Beep(B * 2, quarterNote);
-				        Beep(G, quarterNote);
-				
-				        Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
-				
-				        Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(D * 2, quarterNote);
-				        Beep(G, quarterNote);
-				
-				        Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
-				
-				        Beep(E, quarterNote);
-				        Beep(A * 2, quarterNote);
-				        Beep(B * 2, quarterNote);
-				        Beep(G, quarterNote);
+						Beep(G, quarterNote);
+						Beep(C * 2, quarterNote);
+						Beep(G, quarterNote);
+						Beep(E, quarterNote);
+						Beep(A * 2, quarterNote);
+						Beep(B * 2, quarterNote);
+						Beep(G, quarterNote);
+						Beep(E, quarterNote);
+						Beep(G, quarterNote);
+						Beep(C * 2, quarterNote);
+						Beep(G, quarterNote);
+						Beep(E, quarterNote);
+						Beep(G, quarterNote);
+						Beep(D * 2, quarterNote);
+						Beep(G, quarterNote);
+						Beep(E, quarterNote);
+						Beep(G, quarterNote);
+						Beep(C * 2, quarterNote);
+						Beep(G, quarterNote);
+						Beep(E, quarterNote);
+						Beep(A * 2, quarterNote);
+						Beep(B * 2, quarterNote);
+						Beep(G, quarterNote);
 						printf("\nPARABENS! VOCE CONCLUIU TODAS AS FASES E CHEGOU AO FINAL DO JOGO!\n");
 						system("pause");
 						system("cls");
@@ -1230,11 +1292,11 @@ int main()
 									mapa3[27][3] = '&';
 									continue;
 								}
-								// Verificar se o jogador colidiu com o monstro
-					        	else if(mapa3[i-1][j] == '¬') 
-								{
+							// Verificar se o jogador colidiu com o monstro
+					        	else if(mapa3[i-1][j] == 'Â¬') 
+							{	
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa3[i][j] = ' ';
 					           		i = 27;
 					           		j = 2;
@@ -1244,83 +1306,83 @@ int main()
 					        	else if(mapa3[i-1][j] == 'K') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa3[i][j] = ' ';
 					           		i = 28;
 					           		j = 1;
 					           		mapa3[i][j] = '&';
 					        	}
-								else if(mapa3[i-1][j] == 'O')
-								{
-									auxiliar3 = 'O';
-									mapa3[i-1][j] = mapa3[i][j];
-									mapa3[i][j] = ' ';
-								}
-								else if(auxiliar3 == 'O')
-								{
-									if(mapa3[i-1][j] == '*' || mapa3[i-1][j] == 'D' || mapa3[i-1][j] == '=')
-									{
-										continue;
-									}
-									else
-									{
-										mapa3[i-1][j] = mapa3[i][j];
-										mapa3[i][j] = 'O';
-										auxiliar3 = ' ';
-									}
-								}
-								else if(mapa3[i-1][j] == '>')
-								{
-									auxiliar3 = '>';
-									mapa3[i-1][j] = mapa3[i][j];
-									mapa3[i][j] = ' ';
-								}
-								else if(auxiliar3 == '>')
-								{
-									if(mapa3[i-1][j] == '*' || mapa3[i-1][j] == 'D' || mapa3[i-1][j] == '=')
-									{
-										continue;
-									}
-									else
-									{
-										mapa3[i-1][j] = mapa3[i][j];
-										mapa3[i][j] = '>';
-										auxiliar3 = ' ';
-									}
-								}
-								else if(mapa3[i-1][j] == '@')
-								{
-									auxiliar2 = '@';
-									mapa3[i-1][j] = mapa3[i][j];
-									mapa3[i][j] = ' ';
-								}
-								else if(auxiliar2 == '@')
-								{
-									if(mapa3[i-1][j] == '*' || mapa3[i-1][j] == 'D' || mapa3[i-1][j] == '=')
-									{
-										continue;
-									}
-									else
-									{
-										mapa3[i-1][j] = mapa3[i][j];
-										mapa3[i][j] = '@';
-										auxiliar2 = ' ';
-									}
-								}
-								else if(mapa3[i-1][j] == '*' || mapa3[i-1][j] == 'D' || mapa3[i-1][j] == '=')
+							else if(mapa3[i-1][j] == 'O')
+							{
+								auxiliar3 = 'O';
+								mapa3[i-1][j] = mapa3[i][j];
+								mapa3[i][j] = ' ';
+							}
+							else if(auxiliar3 == 'O')
+							{
+								if(mapa3[i-1][j] == '*' || mapa3[i-1][j] == 'D' || mapa3[i-1][j] == '=')
 								{
 									continue;
 								}
 								else
 								{
-									auxiliar1 = mapa3[i][j];
-									mapa3[i][j] = mapa3[i-1][j];
-									mapa3[i-1][j] = auxiliar1;
+									mapa3[i-1][j] = mapa3[i][j];
+									mapa3[i][j] = 'O';
+									auxiliar3 = ' ';
 								}
+							}
+							else if(mapa3[i-1][j] == '>')
+							{
+								auxiliar3 = '>';
+								mapa3[i-1][j] = mapa3[i][j];
+								mapa3[i][j] = ' ';
+							}
+							else if(auxiliar3 == '>')
+							{
+								if(mapa3[i-1][j] == '*' || mapa3[i-1][j] == 'D' || mapa3[i-1][j] == '=')
+								{
+									continue;
+								}
+								else
+								{
+									mapa3[i-1][j] = mapa3[i][j];
+									mapa3[i][j] = '>';
+									auxiliar3 = ' ';
+								}
+							}
+							else if(mapa3[i-1][j] == '@')
+							{
+								auxiliar2 = '@';
+								mapa3[i-1][j] = mapa3[i][j];
+								mapa3[i][j] = ' ';
+							}
+							else if(auxiliar2 == '@')
+							{
+								if(mapa3[i-1][j] == '*' || mapa3[i-1][j] == 'D' || mapa3[i-1][j] == '=')
+								{
+									continue;
+								}
+								else
+								{
+									mapa3[i-1][j] = mapa3[i][j];
+									mapa3[i][j] = '@';
+									auxiliar2 = ' ';
+								}
+							}
+							else if(mapa3[i-1][j] == '*' || mapa3[i-1][j] == 'D' || mapa3[i-1][j] == '=')
+							{
+								continue;
+							}
+							else
+							{
+								auxiliar1 = mapa3[i][j];
+								mapa3[i][j] = mapa3[i-1][j];
+								mapa3[i-1][j] = auxiliar1;
 							}
 						}
 					}
 				}
+			}
 				else if(escolha == 'a')
 				{
 					for(i = 0; i < tam3; i++)
@@ -1339,10 +1401,10 @@ int main()
 									continue;
 								}
 								// Verificar se o jogador colidiu com o monstro (PRECISA TER ISSO)
-					        	else if(mapa3[i][j-1] == '¬') 
+					        	else if(mapa3[i][j-1] == 'Â¬') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa3[i][j] = ' ';
 					           		i = 27;
 					           		j = 2;
@@ -1352,7 +1414,7 @@ int main()
 					        	else if(mapa3[i][j-1] == 'K') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa3[i][j] = ' ';
 					           		i = 28;
 					           		j = 1;
@@ -1447,10 +1509,10 @@ int main()
 									continue;
 								}
 								// Verificar se o jogador colidiu com o monstro (PRECISA TER ISSO)
-					        	else if(mapa3[i+1][j] == '¬') 
+					        	else if(mapa3[i+1][j] == 'Â¬') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa3[i][j] = ' ';
 					           		i = 27;
 					           		j = 2;
@@ -1460,7 +1522,7 @@ int main()
 					        	else if(mapa3[i+1][j] == 'K') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa3[i][j] = ' ';
 					           		i = 28;
 					           		j = 1;
@@ -1557,10 +1619,10 @@ int main()
 									continue;
 								}
 								// Verificar se o jogador colidiu com o monstro (PRECISA TER ISSO)
-					        	else if(mapa3[i][j+1] == '¬') 
+					        	else if(mapa3[i][j+1] == 'Â¬') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa3[i][j] = ' ';
 					           		i = 27;
 					           		j = 2;
@@ -1570,7 +1632,7 @@ int main()
 					        	else if(mapa3[i][j+1] == 'K') 
 								{
 					           	 	vidas--;
-					           	 	// Redefinir posição do jogador
+					           	 	// Redefinir posiÃ§Ã£o do jogador
 					           	 	mapa3[i][j] = ' ';
 					           		i = 28;
 					           		j = 1;
@@ -1653,48 +1715,48 @@ int main()
 		{
 			system("cls");
 			printf("+----------------------------------------------+\n");
-		    printf("¦                                              ¦\n");
-		    printf("¦  Dungeon Crawler eh um jogo de exploracao e  ¦\n");
-		    printf("¦  aventura no qual voce desbrava uma          ¦\n");
-		    printf("¦  masmorra cheia de desafios.                 ¦\n");
-		    printf("¦                                              ¦\n");
-		    printf("¦  O objetivo do jogo eh encontrar as chaves   ¦\n");
-		    printf("¦  para abrir as portas e passar das fases.    ¦\n");
-		    printf("¦  Ao passar de todas, voce vence.             ¦\n");
-		    printf("¦                                              ¦\n");
-		    printf("¦  Os elementos do jogo sao simbolizados por   ¦\n");
-		    printf("¦  caracteres:                                 ¦\n");
-		    printf("¦  &: Seu personagem                           ¦\n");
-		    printf("¦  *: Paredes                                  ¦\n");
-		    printf("¦  D: Portas trancadas                         ¦\n");
-		    printf("¦  =: Portas abertas                           ¦\n");
-		    printf("¦  @: Chaves. Sao usadas para destrancar as    ¦\n");
-		    printf("¦     portas                                   ¦\n");
-		    printf("¦  O: Botoes. Realizam determinados comandos   ¦\n");
-		    printf("¦     dependendo do mapa                       ¦\n");
-		    printf("¦  #: Espinhos. Causam dano ao seu personagem  ¦\n");
-		    printf("¦  >: Teletransportador. Lhe leva para lugares ¦\n");
-		    printf("¦     do mapa antes impossíveis de se chegar   ¦\n");
-		    printf("¦  ¬: Monstro nível 1. Inimigo nao muito       ¦\n");
-		    printf("¦     agressivo. Se movimenta de maneira       ¦\n");
-		    printf("¦     aleatoria                                ¦\n");
-		    printf("¦  K: Monstro nível 2. Inimigo agressivo. Se   ¦\n");
-		    printf("¦     movimenta em direcao ao seu personagem   ¦\n");
-		    printf("¦                                              ¦\n");
-		    printf("¦  Voce se movimenta usando as teclas 'w', 'a',¦\n");
-		    printf("¦  's' e 'd', podendo ir para qualquer direcao ¦\n");
-		    printf("¦                                              ¦\n");
-		    printf("¦  Voce pode usar a tecla 'i' para interagir   ¦\n");
-		    printf("¦  com as chaves, botoes e teletransportadores.¦\n");
-		    printf("¦  Basta permanecer em cima deles              ¦\n");
-		    printf("¦                                              ¦\n");
-		    printf("¦  Ao receber dano de algum espinho ou         ¦\n");
-		    printf("¦  monstro, voce perde uma vida. Ao perder     ¦\n");
-		    printf("¦  todas as vidas, eh Game Over!               ¦\n");
-		    printf("¦                                              ¦\n");
-		    printf("¦  Desvie dos obstaculos e supere os desafios  ¦\n");
-		    printf("¦  para chegar ate o final. Boa sorte!         ¦\n");
-		    printf("¦                                              ¦\n");
+		    printf("Â¦                                              Â¦\n");
+		    printf("Â¦  Dungeon Crawler eh um jogo de exploracao e  Â¦\n");
+		    printf("Â¦  aventura no qual voce desbrava uma          Â¦\n");
+		    printf("Â¦  masmorra cheia de desafios.                 Â¦\n");
+		    printf("Â¦                                              Â¦\n");
+		    printf("Â¦  O objetivo do jogo eh encontrar as chaves   Â¦\n");
+		    printf("Â¦  para abrir as portas e passar das fases.    Â¦\n");
+		    printf("Â¦  Ao passar de todas, voce vence.             Â¦\n");
+		    printf("Â¦                                              Â¦\n");
+		    printf("Â¦  Os elementos do jogo sao simbolizados por   Â¦\n");
+		    printf("Â¦  caracteres:                                 Â¦\n");
+		    printf("Â¦  &: Seu personagem                           Â¦\n");
+		    printf("Â¦  *: Paredes                                  Â¦\n");
+		    printf("Â¦  D: Portas trancadas                         Â¦\n");
+		    printf("Â¦  =: Portas abertas                           Â¦\n");
+		    printf("Â¦  @: Chaves. Sao usadas para destrancar as    Â¦\n");
+		    printf("Â¦     portas                                   Â¦\n");
+		    printf("Â¦  O: Botoes. Realizam determinados comandos   Â¦\n");
+		    printf("Â¦     dependendo do mapa                       Â¦\n");
+		    printf("Â¦  #: Espinhos. Causam dano ao seu personagem  Â¦\n");
+		    printf("Â¦  >: Teletransportador. Lhe leva para lugares Â¦\n");
+		    printf("Â¦     do mapa antes impossÃ­veis de se chegar   Â¦\n");
+		    printf("Â¦  Â¬: Monstro nÃ­vel 1. Inimigo nao muito       Â¦\n");
+		    printf("Â¦     agressivo. Se movimenta de maneira       Â¦\n");
+		    printf("Â¦     aleatoria                                Â¦\n");
+		    printf("Â¦  K: Monstro nÃ­vel 2. Inimigo agressivo. Se   Â¦\n");
+		    printf("Â¦     movimenta em direcao ao seu personagem   Â¦\n");
+		    printf("Â¦                                              Â¦\n");
+		    printf("Â¦  Voce se movimenta usando as teclas 'w', 'a',Â¦\n");
+		    printf("Â¦  's' e 'd', podendo ir para qualquer direcao Â¦\n");
+		    printf("Â¦                                              Â¦\n");
+		    printf("Â¦  Voce pode usar a tecla 'i' para interagir   Â¦\n");
+		    printf("Â¦  com as chaves, botoes e teletransportadores.Â¦\n");
+		    printf("Â¦  Basta permanecer em cima deles              Â¦\n");
+		    printf("Â¦                                              Â¦\n");
+		    printf("Â¦  Ao receber dano de algum espinho ou         Â¦\n");
+		    printf("Â¦  monstro, voce perde uma vida. Ao perder     Â¦\n");
+		    printf("Â¦  todas as vidas, eh Game Over!               Â¦\n");
+		    printf("Â¦                                              Â¦\n");
+		    printf("Â¦  Desvie dos obstaculos e supere os desafios  Â¦\n");
+		    printf("Â¦  para chegar ate o final. Boa sorte!         Â¦\n");
+		    printf("Â¦                                              Â¦\n");
    			printf("+----------------------------------------------+\n");
    			Beep(E, quarterNote);
 			Beep(G, quarterNote);
