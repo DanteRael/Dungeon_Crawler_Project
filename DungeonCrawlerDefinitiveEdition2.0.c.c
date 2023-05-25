@@ -155,10 +155,7 @@ void carregarPrograma() {
             printf("%c", 219);
             Sleep;
         }                      
-    }    
-    printf("\n\nIniciando...");
-    Sleep(2000);
-    printf("\r \t\t\t\t  CARREGADO\n\n\n");      
+    }
 }
 
 // Tela de Game Over
@@ -462,8 +459,8 @@ int main()
 				    Beep(G, quarterNote);
 				    Beep(C * 2, quarterNote);
 					Beep(G, quarterNote);
-					printf("Iniciando Fase 2...\n");
-					system("pause");
+					printf("\n\nIniciando Fase 2...\n");
+					Sleep(1000);
 					break;
 				}
 				else if(escolha == 'i')
@@ -492,8 +489,8 @@ int main()
 				        Beep(G, quarterNote);
 				        Beep(C * 2, quarterNote);
 				        Beep(G, quarterNote);
-						printf("Iniciando Fase 2...\n");
-						system("pause");
+						printf("\n\nIniciando Fase 2...\n");
+						Sleep(1000);
 						break;
 					}
 				}	
@@ -750,8 +747,8 @@ int main()
 				    Beep(A * 2, quarterNote);
 				    Beep(B * 2, quarterNote);
 				    Beep(G, quarterNote);
-					printf("Iniciando Fase 3...\n");
-					system("pause");
+					printf("\n\nIniciando Fase 3...\n");
+					Sleep(1000);
 					break;
 				}
 				else if(escolha == 'i')
@@ -800,8 +797,8 @@ int main()
 						Beep(A * 2, quarterNote);
 						Beep(B * 2, quarterNote);
 						Beep(G, quarterNote);
-						printf("Iniciando Fase 3...\n");
-						system("pause");
+						printf("\n\nIniciando Fase 3...\n");
+						Sleep(1000);
 						break;
 					}
 				}
@@ -1128,8 +1125,8 @@ int main()
 			int monstro1_mapa3_j = 21;
 			mapa2[monstro1_mapa3_i][monstro1_mapa3_j] = '¬';
 		    
-			while(c1 != 1)
-			{ //Fase 3 ##########################################################################################################################################################
+			while(c1 != 1) //Fase 3 ##########################################################################################################################################################
+			{
 				c2 = 0;                                               
     			// Lógica para movimentação do monstro lvl 2 (TEM QUE ESTAR DENTRO DO lAÇO WHILE(1)
         		moverMonstro2(mapa3, &monstro2_i, &monstro2_j, personagem_i, personagem_j);
@@ -1201,11 +1198,10 @@ int main()
 				    Beep(A * 2, quarterNote);
 				    Beep(B * 2, quarterNote);
 				    Beep(G, quarterNote);
-					printf("\nPARABENS! VOCE CONCLUIU TODAS AS FASES E CHEGOU AO FINAL DO JOGO!\n");
+					printf("PARABENS! VOCE CONCLUIU TODAS AS FASES E CHEGOU AO FINAL DO JOGO!\n");
+					printf("OBRIGADO POR JOGAR!\n\n");
 					system("pause");
 					system("cls");
-					printf("\nOBRIGADO POR JOGAR!\n");
-					system("pause");
 					break;
 				}
 				else if(escolha == 'i')
@@ -1260,11 +1256,10 @@ int main()
 						Beep(A * 2, quarterNote);
 						Beep(B * 2, quarterNote);
 						Beep(G, quarterNote);
-						printf("\nPARABENS! VOCE CONCLUIU TODAS AS FASES E CHEGOU AO FINAL DO JOGO!\n");
+						printf("PARABENS! VOCE CONCLUIU TODAS AS FASES E CHEGOU AO FINAL DO JOGO!\n");
+						printf("OBRIGADO POR JOGAR!\n\n");
 						system("pause");
 						system("cls");
-						printf("\nOBRIGADO POR JOGAR!\n");
-						system("pause");
 						break;
 					}
 				}
