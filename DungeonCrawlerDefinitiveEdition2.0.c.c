@@ -194,7 +194,6 @@ void animacao_GameOver() {
         for (j = 0; j < centerRow - i; j++) {
             printf("\n");
         }
-        
         delay(delayTime);
     }
     
@@ -203,7 +202,7 @@ void animacao_GameOver() {
     printf("             ####                         ####\n");
     printf("            ####                           ####\n");
     printf("            ####          GAME OVER        ####\n");
-     printf("            ####                           ####\n");
+    printf("             ####                           ####\n");
     printf("              ####                         ####\n");
     printf("               ############################## \n\n\n\n\n\n");
 }
@@ -232,7 +231,6 @@ void animacao_Vitoria() {
         for (j = 0; j < centerRow - i; j++) {
             printf("\n");
         }
-        
         delay(delayTime);
     }
     
@@ -241,12 +239,10 @@ void animacao_Vitoria() {
     printf("             ####                         ####\n");
     printf("            ####                           ####\n");
     printf("            ####           VITORIA         ####\n");
-     printf("            ####                           ####\n");
+    printf("             ####                           ####\n");
     printf("              ####                         ####\n");
     printf("               ############################## \n\n\n\n\n\n");
 }
-
-
 
 // Definição de música
 const int C = 261;
@@ -256,8 +252,6 @@ const int F = 349;
 const int G = 392;
 const int A = 440;
 const int B = 493;
-
-
 
 // Função principal do jogo
 int main()
@@ -416,7 +410,6 @@ int main()
 		    Beep(G, quarterNote);     // G
 		    Beep(C * 2, quarterNote); // C (uma oitava acima)
 		    Beep(G, quarterNote);     // G
-		
 		    Beep(E, quarterNote);     // E
 		    Beep(G, quarterNote);     // G
 		    Beep(D * 2, quarterNote); // D (uma oitava acima)
@@ -462,13 +455,13 @@ int main()
 					carregarPrograma();
 					// Reproduz a música de carregamento
 					Beep(E, quarterNote);
-				       	Beep(A * 2, quarterNote);
-				        Beep(B * 2, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
+				    Beep(A * 2, quarterNote);
+				    Beep(B * 2, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(E, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(C * 2, quarterNote);
+					Beep(G, quarterNote);
 					printf("Iniciando Fase 2...\n");
 					system("pause");
 					break;
@@ -491,14 +484,14 @@ int main()
 						system("cls");
 						carregarPrograma();
 						// Reproduz a música de carregamento
-					    	Beep(E, quarterNote);
-				       		Beep(A * 2, quarterNote);
-				        	Beep(B * 2, quarterNote);
-				        	Beep(G, quarterNote);
-				        	Beep(E, quarterNote);
-				        	Beep(G, quarterNote);
-				        	Beep(C * 2, quarterNote);
-				        	Beep(G, quarterNote);
+					    Beep(E, quarterNote);
+				    	Beep(A * 2, quarterNote);
+				        Beep(B * 2, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(E, quarterNote);
+				        Beep(G, quarterNote);
+				        Beep(C * 2, quarterNote);
+				        Beep(G, quarterNote);
 						printf("Iniciando Fase 2...\n");
 						system("pause");
 						break;
@@ -750,13 +743,13 @@ int main()
 					carregarPrograma();
 					// Reproduz a música de carregamento
 					Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(E, quarterNote);
-				        Beep(A * 2, quarterNote);
-				        Beep(B * 2, quarterNote);
-				        Beep(G, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(C * 2, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(E, quarterNote);
+				    Beep(A * 2, quarterNote);
+				    Beep(B * 2, quarterNote);
+				    Beep(G, quarterNote);
 					printf("Iniciando Fase 3...\n");
 					system("pause");
 					break;
@@ -1138,10 +1131,10 @@ int main()
 			while(c1 != 1)
 			{ //Fase 3 ##########################################################################################################################################################
 				c2 = 0;                                               
-    				// Lógica para movimentação do monstro lvl 2 (TEM QUE ESTAR DENTRO DO lAÇO WHILE(1)
-        			moverMonstro2(mapa3, &monstro2_i, &monstro2_j, personagem_i, personagem_j);
+    			// Lógica para movimentação do monstro lvl 2 (TEM QUE ESTAR DENTRO DO lAÇO WHILE(1)
+        		moverMonstro2(mapa3, &monstro2_i, &monstro2_j, personagem_i, personagem_j);
         		
-        			// Função/Código de movimentação do monstro lvl 1 para o mapa 3
+        		// Função/Código de movimentação do monstro lvl 1 para o mapa 3
 				moverMonstro_fase3(mapa3, &monstro1_mapa3_i, &monstro1_mapa3_j);
         		
 				auxiliar1 = ' '; auxiliar2 = ' ';
@@ -1185,29 +1178,29 @@ int main()
 					system("cls");
 					animacao_Vitoria();
 					Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(E, quarterNote);
-				        Beep(A * 2, quarterNote);
-				        Beep(B * 2, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(D * 2, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(E, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(C * 2, quarterNote);
-				        Beep(G, quarterNote);
-				        Beep(E, quarterNote);
-				        Beep(A * 2, quarterNote);
-				        Beep(B * 2, quarterNote);
-				        Beep(G, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(C * 2, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(E, quarterNote);
+				    Beep(A * 2, quarterNote);
+				    Beep(B * 2, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(E, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(C * 2, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(E, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(D * 2, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(E, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(C * 2, quarterNote);
+				    Beep(G, quarterNote);
+				    Beep(E, quarterNote);
+				    Beep(A * 2, quarterNote);
+				    Beep(B * 2, quarterNote);
+				    Beep(G, quarterNote);
 					printf("\nPARABENS! VOCE CONCLUIU TODAS AS FASES E CHEGOU AO FINAL DO JOGO!\n");
 					system("pause");
 					system("cls");
@@ -1762,7 +1755,6 @@ int main()
 			Beep(G, quarterNote);
 			Beep(C * 2, quarterNote);
 			Beep(G, quarterNote);
-				
 			Beep(E, quarterNote);
 			Beep(A * 2, quarterNote);
 			Beep(B * 2, quarterNote);
