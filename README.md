@@ -34,3 +34,7 @@ O Dungeon Crawler é o projeto de um jogo desenvolvido em DEV C.
         Ao receber dano de algum espinho ou
         monstro, voce perde uma vida. Ao perder    
         todas as vidas, eh Game Over!
+<img width = 200 height = 200 src="https://github.com/DanteRael/Dungeon_Crawler_Project/assets/128925828/724bb1fe-da41-4358-9856-1ec556a413bf">
+<img width = 200 height = 200 src= "https://github.com/DanteRael/Dungeon_Crawler_Project/assets/128925828/82aa80ba-f1fc-47e6-9244-639b9b72eb71">
+<img width = 200 height = 200 src= "https://github.com/DanteRael/Dungeon_Crawler_Project/assets/128925828/2adc4f63-5807-4752-a55d-c71093b34871">
+
